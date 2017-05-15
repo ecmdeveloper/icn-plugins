@@ -25,8 +25,9 @@ define([
 			this.level.innerHTML = item.level;
 			this.accessType.innerHTML = this.toTitleCase(item.accessType);
 			this.granteeName.innerHTML = item.name;
-			this.granteeType.innerHTML = this.toTitleCase(item.granteeType);;
+			this.granteeType.innerHTML = this.toTitleCase(item.granteeType);
 			this.accessRights.innerHTML = "";
+			this.permissionSource.innerHTML = this.toTitleCase( item.permissionSource.replace(/_/g, " "));
 			
 			item.accessRights.forEach( lang.hitch(this,function(accessRight) {
 				this.accessRights.innerHTML +=  (accessRight.value? "&#9635;" : "&#9744;") + " " + accessRight.name + "<br>";

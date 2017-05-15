@@ -125,7 +125,7 @@ public class SecurityDataProvider {
 		data.put("parent", parentId);
 		data.put("accessType", permission.get_AccessType().toString() );
 		data.put("granteeType", permission.get_GranteeType().toString() );
-//		data.put("permissionSource", permission.get_PermissionSource() );
+		data.put("permissionSource", permission.get_PermissionSource().toString() );
 	
 		getPermissionDescription(data, permission.get_AccessMask(), descriptions);
 

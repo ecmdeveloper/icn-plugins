@@ -29,6 +29,4 @@ function(declare, lang, aspect, Desktop, PluginConfig ) {
 			}
 		});
 	}), true);
-
-	
 });

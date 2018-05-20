@@ -64,7 +64,6 @@ define([
 		
 		onCheckMessages: function() {
 
-			debugger;
 			const queryResult = this.messagesStore.query({changed: true});
 			queryResult.forEach( function(value) {
 				console.log(value);
@@ -108,13 +107,8 @@ define([
 				}
 			}
 			
-			const changedResult = this.store.query({changed: true});
-			if (changedResult.length > 0) {
-				this.widget.onSaveNeeded(true);
-			}
-			
+			this.widget.onSaveNeeded(true);
 			domConstruct.destroy(this.row);
-			
 		},
 		
 		load: function(onComplete) {
@@ -166,7 +160,8 @@ define([
 
 		    const textarea = new Textarea({
 		        name: selectTextId,
-		        style: "width:100%;font-family: inherit;"
+		        style: "width:100%;font-family: inherit;",
+		        value: item ? item.value : ""	
 		    }, selectTextId);
 		    
 		    textarea.startup();
